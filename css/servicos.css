@@ -1,0 +1,177 @@
+/* --- Estilos Gerais --- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* --- Estilos do Cabeçalho --- */
+header {
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* --- Estilos do Título Principal (h1) --- */
+h1 {
+    color: orange;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+/* --- Estilos da Imagem do Logo --- */
+header img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0;
+}
+
+/* --- Estilos da Navegação (nav) --- */
+nav {
+    color: orange;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* --- Estilos da Lista de Navegação (nav ul) --- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* --- Estilos dos Itens da Lista de Navegação (nav li) --- */
+nav ul li {
+    padding: 5px 10px;
+}
+
+/* --- Estilos dos Links da Navegação (nav a) --- */
+nav ul li a {
+    color: orange;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: lightgray;
+    
+}
+.btn-entrar-maxfit {
+    background-color: transparent;
+    color: #FFA500;
+    border: 2px solid #FFA500;
+    border-radius: 12px;
+    padding: 10px 15px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-entrar-maxfit:hover {
+    background-color: #FFA500;
+    color: white;
+}
+
+
+/* Estilo para os links "Esqueceu a senha?" e "Criar conta" */
+.card .text-center .link-maxfit-orange {
+    color: #FFA500;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block; /* Importante para que a borda e o padding funcionem bem em um link */
+    padding: 8px 15px; /* Adiciona um padding para a borda não ficar grudada no texto */
+    border: 2px solid var(--maxfit-orange); /* <--- ADICIONE ESTA LINHA: Borda laranja */
+    border-radius: 8px; /* Cantos arredondados para a borda */
+    transition: all 0.3s ease; /* Transição para todas as propriedades no hover */
+}
+
+.card .text-center .link-maxfit-orange:hover {
+    color: rgb(245, 159, 1); /* Texto branco no hover */
+    background-color: var(--maxfit-orange); /* Fundo laranja no hover */
+    border-color: var(--maxfit-orange); /* Borda laranja no hover */
+    text-decoration: none; /* Remove sublinhado no hover (se quiser) */
+}
+/* Estilo padrão: borda laranja, fundo transparente, texto branco */
+/* Estilo padrão: borda e texto laranja, fundo transparente */
+.btn-social-google,
+.btn-social-facebook {
+    background-color: transparent;
+    color: #FFA500; /* texto laranja */
+    border: 2px solid #FFA500; /* borda laranja */
+    padding: 10px;
+    border-radius: 12px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* espaço entre ícone e texto */
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Ao passar o mouse: fundo laranja, texto branco */
+.btn-social-google:hover,
+.btn-social-facebook:hover {
+    background-color: #FFA500;
+    color: white;
+}
+
+/* Espaço entre o header e o formulário */
+.formulario-login {
+    margin-top: 40px; /* Altere o valor conforme o espaço desejado */
+}
+.card {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  button,
+  .btn-social-google,
+  .btn-social-facebook,
+  .btn-entrar-maxfit {
+    width: 100%;
+    font-size: 1em;
+    padding: 10px;
+    margin-top: 10px;
+  }
+}
