@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro aluno</title>
+    <link rel="stylesheet" href="css/cadastroAluno.css">
+</head>
+<body>
+     
+ <div class="container">
+    
+    <!-- Header com título e logo -->
+    <div class="header">
+      <h1>CRIAR CONTA</h1>
+      <img src="img/logo.png" alt="Logo MaxFit" class="logo">
+    </div>
+    
+    <!-- Upload de foto -->
+    <div class="photo-upload">
+      <input type="file" id="foto" accept="image/*">
+      <label for="foto">
+        <img src="imagens/iconeUsuario.png" alt="Ícone usuário">
+        <span>Adicionar foto</span>
+      </label>
+    </div>
+    
+    <!-- Formulário de dados do aluno -->
+    <form id="form-aluno">
+      <div class="form-group">
+        <select name="sexo" required>
+          <option value="" disabled selected>Sexo</option>
+          <option value="F">Feminino</option>
+          <option value="M">Masculino</option>
+          <option value="O">Outro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="text" name="nascimento" placeholder="Data de Nascimento" required>
+      </div>
+      <div class="form-group">
+        <input type="text" name="cep" placeholder="CEP" required>
+      </div>
+      <button type="submit" class="btn">Continuar</button>
+    </form>
+    
+  </div>
+
+</body>
+</html>
