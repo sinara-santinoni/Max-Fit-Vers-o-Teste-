@@ -1,10 +1,10 @@
 // js/login.js
 
-// Importa Firebase direto do CDN (versão 9.6.1)
+// Firebase CDN (v9.6.1)
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
 
-// Configuração do Firebase do seu projeto
+// Configuração Firebase do seu projeto
 const firebaseConfig = {
   apiKey: "AIzaSyA0OZNiMCVqXJ2TWYwY_mF1dytgnZLdLIk",
   authDomain: "max-fit-24c41.firebaseapp.com",
@@ -15,25 +15,42 @@ const firebaseConfig = {
   measurementId: "G-CW2WKQMYHC"
 };
 
-// Inicializa o Firebase
+// Inicializar Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
 
-// Função de login com Google
+// Providers
+const googleProvider = new GoogleAuthProvider();
+const facebookProvider = new FacebookAuthProvider();
+
+// Login com Google
 function loginGoogle() {
-  console.log("Botão Google clicado");
-  signInWithPopup(auth, provider)
+  signInWithPopup(auth, googleProvider)
     .then((result) => {
       const user = result.user;
       alert(`Login com Google realizado com sucesso! Bem-vindo, ${user.displayName}`);
-      window.location.href = "inicio.html"; // Redireciona após login
+      window.location.href = "inicio.html";
     })
     .catch((error) => {
-      console.error("Erro ao fazer login com o Google:", error);
-      alert("Erro ao fazer login com o Google: " + error.message);
+      console.error("Erro no login com Google:", error);
+      alert("Erro no login com Google: " + error.message);
     });
 }
 
-// Deixa a função acessível no botão do HTML
+// Login com Facebook
+function loginFacebook() {
+  signInWithPopup(auth, facebookProvider)
+    .then((result) => {
+      const user = result.user;
+      alert(`Login com Facebook realizado com sucesso! Bem-vindo, ${user.displayName}`);
+      window.location.href = "inicio.html";
+    })
+    .catch((error) => {
+      console.error("Erro no login com Facebook:", error);
+      alert("Erro no login com Facebook: " + error.message);
+    });
+}
+
+// Disponibilizar funções no escopo global para os botões HTML
 window.loginGoogle = loginGoogle;
+window.loginFacebook = loginFacebook;
