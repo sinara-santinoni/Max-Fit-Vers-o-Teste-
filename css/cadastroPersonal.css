@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    background: #ffffff; /* fundo branco puro */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,6 @@ body {
     justify-content: center;
     padding: 20px;
 }
-
 .container {
     background: white;
     padding: 40px 30px;

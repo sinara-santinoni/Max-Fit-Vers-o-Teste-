@@ -1,21 +1,17 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 body {
   font-family: Arial, sans-serif;
-  background-color: #ffffff; /* branco puro */
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
-
-
 
 .container {
   background: #fff;
@@ -27,15 +23,13 @@ body {
   position: relative;
 }
 
-
 .step-indicator {
   position: absolute;
   top: 16px;
   right: 16px;
   font-weight: bold;
-  color: #fff; 
+  color: #fff;
 }
-
 
 .header {
   text-align: center;
@@ -50,12 +44,12 @@ body {
   color: #ff6b35;
 }
 
-
 .user-type {
   display: flex;
   justify-content: space-around;
   margin-bottom: 24px;
 }
+
 .user-type-option {
   text-align: center;
   padding: 10px;
@@ -65,16 +59,23 @@ body {
   transition: border-color 0.2s, background-color 0.2s;
   background: #fff;
 }
+
 .user-type-option.selected {
   border-color: #ff6b35;
   background: rgba(255, 107, 53, 0.1);
 }
+
 .user-type-option input {
   display: none;
 }
+
 .user-type-option label {
-  font-size: 16px;
+  display: block; /* Aumenta área de clique */
+  padding: 8px;
+  font-size: 18px;
+  font-weight: 500;
   color: #555;
+  line-height: 1.4;
 }
 
 form {
@@ -95,7 +96,6 @@ form {
   cursor: pointer;
 }
 
-
 .btn {
   width: 100%;
   padding: 12px;
@@ -112,19 +112,17 @@ form {
   background: linear-gradient(135deg, #f7931e, #ff6b35);
 }
 
-
 .link {
   display: block;
   text-align: center;
   margin-top: 8px;
   font-size: 14px;
-  color: #fff; 
+  color: #ff6b35; /* atualizado para melhor contraste */
   text-decoration: none;
 }
 .link:hover {
   text-decoration: underline;
 }
-
 
 .success-screen {
   text-align: center;
@@ -145,6 +143,7 @@ form {
   font-size: 14px;
   margin-bottom: 20px;
 }
+
 @media (max-width: 480px) {
   .container {
     padding: 16px;
@@ -181,6 +180,6 @@ form {
   }
 
   .user-type-option label {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
