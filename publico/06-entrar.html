@@ -14,19 +14,6 @@
 </head>
 
 <body>
-  <header>
-    <h1>Max Fit</h1>
-    <img src="/img/logo.png" alt="Logo Max Fit">
-  <nav>
-      <ul>
-        <li><a href="01-inicio.html">Início</a></li>
-        <li><a href="02-sobre.html">Sobre</a></li>
-        <li><a href="03-contato.html">Contato</a></li>
-        <li><a href="04-entrar.html">Entrar</a></li>
-      </ul>
-    </nav>
-
-  </header>
 
   <div class="container formulario-login d-flex justify-content-center align-items-center mb-5">
     <div class="card p-4 custom-card-shadow" style="width: 100%; max-width: 400px;">
@@ -36,11 +23,13 @@
       <form action="/login" method="POST">
         <div class="mb-3">
           <label for="email" class="form-label">E-mail</label>
-          <input type="email" class="form-control custom-input" id="email" name="email" placeholder="Digite seu e-mail" required>
+          <input type="email" class="form-control custom-input" id="email" name="email" placeholder="Digite seu e-mail"
+            required>
         </div>
         <div class="mb-3">
           <label for="senha" class="form-label">Senha</label>
-          <input type="password" class="form-control custom-input" id="senha" name="senha" placeholder="Digite sua senha" required>
+          <input type="password" class="form-control custom-input" id="senha" name="senha"
+            placeholder="Digite sua senha" required>
         </div>
         <div class="mb-3 form-check">
           <input type="checkbox" class="form-check-input" id="lembrar">
@@ -60,11 +49,11 @@
         <img src="/img/google-original.svg" alt="Google" style="width:20px; height:20px;"> Entrar com o Google
       </button>
 
-     <!-- Botão Facebook -->
-<button class="btn-social-facebook" onclick="loginFacebook()">
-  <img src="/img/facebook-original.svg" alt="Facebook" style="width:20px; height:20px;">
-  Entrar com o Facebook
-</button>
+      <!-- Botão Facebook -->
+      <button class="btn-social-facebook" onclick="loginFacebook()">
+        <img src="/img/facebook-original.svg" alt="Facebook" style="width:20px; height:20px;">
+        Entrar com o Facebook
+      </button>
     </div>
   </div>
 
