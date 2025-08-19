@@ -16,6 +16,39 @@
     h1 {
       color: #e65c00;
     }
+    .button-container {
+      margin-top: 40px;
+      text-align: center;
+    }
+    
+    .button-container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      margin: 0 10px;
+      transition: background-color 0.3s;
+    }
+    
+    #aceitarBtn {
+      background-color: #e65c00;
+      color: white;
+    }
+    
+    #recusarBtn {
+      background-color: #f0f0f0;
+      color: #333;
+      border: 1px solid #ccc;
+    }
+
+    #aceitarBtn:hover {
+      background-color: #d15200;
+    }
+
+    #recusarBtn:hover {
+      background-color: #e0e0e0;
+    }
   </style>
 </head>
 <body>
@@ -51,5 +84,26 @@
   </p>
 
   <p>Última atualização: Julho de 2025</p>
+  <div class="button-container">
+    <button id="aceitarBtn">Li e aceito os termos</button>
+    <button id="recusarBtn" class="recusar">Não aceito os termos</button>
+</div>
+<script>
+   
+    const aceitarBtn = document.getElementById('aceitarBtn');
+    const recusarBtn = document.getElementById('recusarBtn');
+
+    // Adiciona o evento de clique para o botão de aceitar
+    aceitarBtn.addEventListener('click', () => {
+       
+        window.location.href = '../10-cadastroSucesso.html'; 
+    });
+
+   
+    recusarBtn.addEventListener('click', () => {
+      
+        window.location.href = '../06-entrar.html'; 
+    });
+</script>
 </body>
 </html>

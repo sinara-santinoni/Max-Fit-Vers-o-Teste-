@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Cadastro finalizado:", dadosCompletos);
 
     // Redireciona para a tela de sucesso (ajuste o caminho se necessário)
-    window.location.href = "/publico/10-cadastroSucesso.html";
+window.location.href = "../pages/politica.html";
 
     // (opcional) limpar localStorage na tela seguinte
     // localStorage.clear();
